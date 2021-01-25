@@ -35,7 +35,6 @@ export default {
         return project.id === id
       })
       p.complete = !p.complete 
-      // console.log(p)
     }
   }
 }
