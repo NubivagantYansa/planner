@@ -2,11 +2,16 @@
   <div class="project" :class="{ complete: project.complete }">
     <div class="actions">
       <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
+
+                            <!-- Icons -->
       <div class="icons">
         <span @click="deleteProject" class="material-icons">delete</span>
-        <span class="material-icons">edit</span>
+        <router-link :to="{ name: 'EditProject', params: { id: project.id }}">
+          <span class="material-icons">edit</span>
+        </router-link>
         <span @click="toggleComplete" class="material-icons tick">done</span>
       </div>
+    
     </div>
     <div v-if="showDetails" class="details">
       <p>{{ project.details }}</p>

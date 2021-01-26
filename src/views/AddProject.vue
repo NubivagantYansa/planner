@@ -23,7 +23,6 @@ export default {
         details: this.details,
         complete: false
       }
-      console.log(project)
   
      fetch('http://localhost:3000/projects', {
         method: 'POST',
